@@ -11,4 +11,5 @@
 # python
 *.pyc
 
+.idea/
 *.iml

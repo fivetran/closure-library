@@ -39,8 +39,8 @@ goog.require('goog.events');
  * @see goog.db.IndexedDb#setVersion
  * @see goog.db.Transaction#objectStore
  *
- * @param {!IDBObjectStore} store The backing IndexedDb object.
  * @constructor
+ * @param {!IDBObjectStore} store The backing IndexedDb object.
  *
  * TODO(user): revisit msg in exception and errors in this class. In newer
  *     Chrome (v22+) the error/request come with a DOM error string that is

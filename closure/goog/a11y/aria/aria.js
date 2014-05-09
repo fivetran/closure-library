@@ -126,12 +126,12 @@ goog.a11y.aria.removeRole = function(element) {
  * @param {!(goog.a11y.aria.State|string)} stateName State attribute being set.
  *     Automatically adds prefix 'aria-' to the state name if the attribute is
  *     not an extra attribute.
- * @param {string|boolean|number|!goog.array.ArrayLike.<string>} value Value
+ * @param {string|boolean|number|!goog.array.ArrayLike} value Value
  * for the state attribute.
  */
 goog.a11y.aria.setState = function(element, stateName, value) {
   if (goog.isArrayLike(value)) {
-    var array = /** @type {!goog.array.ArrayLike.<string>} */ (value);
+    var array = /** @type {!goog.array.ArrayLike} */ (value);
     value = array.join(' ');
   }
   var attrStateName = goog.a11y.aria.getAriaAttributeName_(stateName);
@@ -243,7 +243,7 @@ goog.a11y.aria.setLabel = function(element, label) {
  * semantics is well supported by most screen readers.
  * Only to be used internally by the ARIA library in goog.a11y.aria.*.
  * @param {!Element} element The element to assert an ARIA role set.
- * @param {!goog.array.ArrayLike.<string>} allowedRoles The child roles of
+ * @param {!goog.array.ArrayLike} allowedRoles The child roles of
  * the roles.
  */
 goog.a11y.aria.assertRoleIsSetInternalUtil = function(element, allowedRoles) {
@@ -324,7 +324,7 @@ goog.a11y.aria.getStateString = function(element, stateName) {
  * Only to be used internally by the ARIA library in goog.a11y.aria.*.
  * @param {!Element} element DOM node to get state from.
  * @param {!goog.a11y.aria.State} stateName State name.
- * @return {!goog.array.ArrayLike.<string>} string Array
+ * @return {!goog.array.ArrayLike} string Array
  *     value of the state attribute.
  */
 goog.a11y.aria.getStringArrayStateInternalUtil = function(element, stateName) {
@@ -337,7 +337,7 @@ goog.a11y.aria.getStringArrayStateInternalUtil = function(element, stateName) {
 /**
  * Splits the input stringValue on whitespace.
  * @param {string} stringValue The value of the string to split.
- * @return {!goog.array.ArrayLike.<string>} string Array
+ * @return {!goog.array.ArrayLike} string Array
  *     value as result of the split.
  * @private
  */

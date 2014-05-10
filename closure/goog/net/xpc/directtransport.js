@@ -62,7 +62,7 @@ var Transport = goog.net.xpc.Transport;
  *     finding the correct window/document. If omitted, uses the current
  *     document.
  * @constructor
- * @extends {Transport}
+ * @extends {goog.net.xpc.Transport}
  */
 goog.net.xpc.DirectTransport = function(channel, opt_domHelper) {
   goog.net.xpc.DirectTransport.base(this, 'constructor', opt_domHelper);
